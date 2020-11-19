@@ -1,7 +1,7 @@
 
 body {
-  background-color: teal;
-    /*background-image: url("/static/components/brick.jpg");*/
+  /*background-color: teal;*/
+    background-image: url("/static/components/10.jpg");
   /*background-color: #cccccc;*/
     background-size: cover;
 }
@@ -15,14 +15,17 @@ h1 {
 
 .top_wc{
 /*border: 5px outset red;*/
-  background-color: lightblue;
+ background-color: lightblue;
   text-align: center;
+  /*opacity: 0.5;*/
+
 }
 
 .kw{
 /*border: 5px outset red;*/
   background-color: lightblue;
   text-align: left;
+   /*opacity: 0.5;*/
 }
 
 h2 {
@@ -48,22 +51,3 @@ ol{
 
 }
 
-label {
-  background-color: teal;
-  color: black;
-  padding: 0.5rem;
-  font-family: Verdana;
-    font-size:35px;
-  border-radius: 0.3rem;
-    border: 2px dashed black;
-  cursor: pointer;
-  margin-top: 4rem;
-    text-align: center;
-    /*text-position: fixed;*/
-    position: center;
-    vertical-align: center;
-    justify-content: center;
-    display:flex;
-    align-items:center;
-
-}
