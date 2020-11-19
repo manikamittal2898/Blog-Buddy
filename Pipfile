@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "*"
+werkzeug = "*"
+yake = {git = "https://github.com/LIAAD/yake"}
+flask-mongoengine = "*"
+wordcloud = "*"
+nltk = "*"
+
+[requires]
+python_version = "3.6"

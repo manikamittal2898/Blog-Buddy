@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ("static",filename="style.css" )}}" >
+    <title>Blog-buddy</title>
+{#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.css">#}
+  </head>
+</head>
+<body>
+<h1 style="position: fixed ;top: 15%; left: 25%;" >Blog-Buddy </h1>
+<h2 style="position: fixed ;top: 28%; left: 28%;" > Let's blog together</h2>
+<form action = "http://localhost:5000/uploader" method = "POST"
+         enctype = "multipart/form-data">
+{#         <input type = "file" name = "file" />#}
+{#         <input type="file" name="file" id="file"  />#}
+{#         <label for="file">Choose a file</label>#}
+
+    <label for="file-upload" class="custom-file-upload" style="position: fixed ;top: 71%; left: 62%; width: 525px;
+     height: 50px; justify-content: center;
+    display:flex;
+    align-items:center;" ><img src="/static/components/Upload.png" width="40" height="40" alt="" loading="lazy"
+        >&nbsp;&nbsp;&nbsp;&nbsp;
+    <i class="fa fa-cloud-upload"></i> Upload File
+</label>
+<input id="file-upload" type="file" name="file"/>
+    <label for="submit" class ="custom-submit" style="position: fixed ;top: 80%; left: 70%; width: 250px;
+     height: 50px; justify-content: center;
+    display:flex;
+    align-items:center;"><i class="fa fa-cloud-upload"></i> Submit</label>
+             <input id="submit" type = "submit"/>
+      </form>
+
+</body>
+</html>
+

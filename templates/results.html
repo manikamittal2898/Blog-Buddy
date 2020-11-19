@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ("static",filename="style2.css" )}}">
+    <title>Blog-buddy text analysis</title>
+
+</head>
+<body>
+<div>
+
+{#    <div>#}
+<h1 > <img src="/static/components/logo2.png" align="top" style="float: left" >&nbsp; Hey, fellow blogger, I have analyzed your blog draft.
+ <br> &nbsp;&nbsp;Come on, let's have a look at it!! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1><br><br><br><br><br><br>
+{#        </div>#}
+</div>
+
+
+<div class="top_wc">
+    <img src="static/components/word.png" style="width:1000px;height:600px;">
+
+</div>
+
+<div class="text_highlight">
+    <p>{{ h_text | safe }}</p>
+</div>
+
+<div class="kw">
+<ol>
+    <h2> Top 20 keywords : </h2>
+   {% for kw, per in keywords %}
+  <li>{{ kw }}
+{% endfor %}
+</ol>
+
+</div>
+
+</body>
+</html>

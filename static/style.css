@@ -1,0 +1,78 @@
+
+
+body {
+  background-color: teal;
+    background-image: url("/static/components/back.jpg");
+  /*background-color: #cccccc;*/
+    background-size: cover;
+}
+h1 {
+  color: black;
+  font-family: verdana;
+  font-size: 500%;
+  alignment: center;
+
+}
+h2 {
+  color: teal;
+  font-size: 250%;
+  alignment: center;
+}
+
+
+
+label {
+  background-color: teal;
+  color: black;
+  padding: 0.5rem;
+  font-family: Verdana;
+    font-size:35px;
+  border-radius: 0.3rem;
+    border: 2px dashed black;
+  cursor: pointer;
+  margin-top: 4rem;
+    text-align: center;
+    /*text-position: fixed;*/
+    position: center;
+    vertical-align: center;
+    justify-content: center;
+    display:flex;
+    align-items:center;
+
+}
+input[type="file"] {
+    display: none;
+}
+input[type="submit"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  /*opacity: 0;*/
+  /*overflow: hidden;*/
+}
+.custom-submit {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  /*opacity: 0;*/
+  /*overflow: hidden;*/
+}
+.custom-file-upload + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: black;
+    background-color: black;
+    outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+.custom-file-upload:focus + label,
+.custom-file-upload + label:hover {
+    background-color: indianred;
+}
+
