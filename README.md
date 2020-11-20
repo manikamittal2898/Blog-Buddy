@@ -13,3 +13,5 @@ Suggests list of suitable tags for the blog article.
 The frontend will be a webpage that supports upload and copy-paste of the text to be analyzed. It will present results to the users in the form of - word cloud and suggested tags.
 <h2>Backend</h2>
 Using an algorithm based on n-gram analysis, topic analysis and some other heuristics, it generates word cloud and a list of suitable tags for the text submitted for analysis. 
+ <h1>Demo</h1>
+https://blog-buddy.herokuapp.com/ 
