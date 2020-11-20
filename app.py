@@ -4,6 +4,8 @@ from werkzeug.utils import secure_filename
 import yake
 from highlight import TextHighlighter
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 
 app = Flask(__name__)
