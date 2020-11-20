@@ -7,6 +7,7 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import nltk
 nltk.download('stopwords')
 from nltk.corpus import stopwords
+import random
 
 app = Flask(__name__)
 
@@ -47,8 +48,9 @@ def upload_file():
             max_font_size=50,
             random_state=41
         ).generate(str(doc))
-        wordcloud.to_file("static/components/word.png")
-    return render_template("results.html", keywords=keywords, h_text=h_text)
+        x=str(random.random())
+        wordcloud.to_file("static/components/word.png"+x)
+    return render_template("results.html", keywords=keywords, h_text=h_text,x=x)
 
 
 if __name__ == '__main__':
