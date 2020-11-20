@@ -7,6 +7,10 @@ verify_ssl = true
 
 [packages]
 gunicorn = "*"
+flask = "*"
+yake-github = "*"
+wordcloud = "*"
+nltk = "*"
 
 [requires]
 python_version = "3.6"

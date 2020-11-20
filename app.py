@@ -3,6 +3,8 @@ from flask import Flask, render_template, request, Response
 from werkzeug.utils import secure_filename
 import yake
 from highlight import TextHighlighter
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+from nltk.corpus import stopwords
 
 app = Flask(__name__)
 
@@ -34,8 +36,7 @@ def upload_file():
 
         th = TextHighlighter(max_ngram_size=3, highlight_pre="<b >", highlight_post="</b>")
         h_text= th.highlight(text, keywords)
-        from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
-        from nltk.corpus import stopwords
+
         stop_words = set(stopwords.words("english"))
         wordcloud = WordCloud(
             background_color='black',
