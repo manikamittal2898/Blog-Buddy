@@ -6,7 +6,7 @@ body {
     background-size: cover;
 }
 h1 {
-  color: black;
+
   font-family: verdana;
   font-size: 300%;
   alignment: center;
@@ -16,7 +16,7 @@ h1 {
 .top_wc{
 /*border: 5px outset red;*/
  background-color: lightblue;
-  text-align: center;
+  text-align: left;
   /*opacity: 0.5;*/
 
 }
@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-  color: black;
+  color: orange;
 
   font-family: verdana;
   font-size: 200%;
@@ -50,4 +50,9 @@ ol{
   font-size: 140%;
 
 }
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

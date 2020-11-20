@@ -4,19 +4,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{{ url_for ("static",filename="style.css" )}}" >
     <title>Blog-buddy</title>
-{#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.css">#}
   </head>
-{#</head>#}
 <body>
 <img src="/static/components/logo5.png" align="top" style="float: left;top: 35%" >
 <h1 style="position: fixed ;top: 18%; left: 25%;" >Blog-Buddy </h1>
 <h2 style="position: fixed ;top: 31%; left: 28%;" > Let's blog together</h2>
 <form action = "http://localhost:5000/uploader" method = "POST"
          enctype = "multipart/form-data">
-{#         <input type = "file" name = "file" />#}
-{#         <input type="file" name="file" id="file"  />#}
-{#         <label for="file">Choose a file</label>#}
-
     <label for="file-upload" class="custom-file-upload" style="position: fixed ;top: 74%; left: 62%; width: 525px;
      height: 50px; justify-content: center;
     display:flex;

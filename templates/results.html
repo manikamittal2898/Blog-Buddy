@@ -10,30 +10,35 @@
 <div>
 
 {#    <div>#}
-<h1 > <img src="/static/components/logo2.png" align="top" style="float: left" >&nbsp; Hey, fellow blogger, I have analyzed your blog draft.
+<h1 style="color: orange"> <img src="/static/components/logo2.png" align="top" style="float: left;" >&nbsp; Hey, fellow blogger, I have analyzed your blog draft.
  <br> &nbsp;&nbsp;Come on, let's have a look at it!! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1><br><br><br><br><br><br>
 {#        </div>#}
 </div>
-
-
+<h1 style="color: orange; text-align:center;"> Word Cloud  </h1>
+    <img src="static/components/word.png" style="width:1000px;height:600px;" class="center">
+<br><br><br><br>
 <div class="top_wc">
-    <img src="static/components/word.png" style="width:1000px;height:600px;">
 
-</div>
 
-<div class="text_highlight">
-    <p>{{ h_text | safe }}</p>
-</div>
 
-<div class="kw">
+ <div class="kw">
+ <br><br>
+    <h2 style="color:teal "> Suggested Tags : </h2>
+
 <ol>
-    <h2> Top 20 keywords : </h2>
+
    {% for kw, per in keywords %}
   <li>{{ kw }}
 {% endfor %}
 </ol>
 
 </div>
+<div class="text_highlight">
+    <h2 style="color: teal">Input Text with Keywords Highlighted : </h2>
+    <p>{{ h_text | safe }}<br><br><br><br></p>
+</div>
+</div>
+
 
 </body>
 </html>
