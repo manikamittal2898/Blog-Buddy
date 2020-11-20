@@ -49,8 +49,8 @@ def upload_file():
             random_state=41
         ).generate(str(doc))
         x=str(random.random())
-        wordcloud.to_file("static/components/word.png"+x)
-    return render_template("results.html", keywords=keywords, h_text=h_text,x=x)
+        wordcloud.to_file("static/components/word.png")
+    return render_template("results.html", keywords=keywords, h_text=h_text)
 
 
 if __name__ == '__main__':
