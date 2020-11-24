@@ -8,6 +8,8 @@ import nltk
 nltk.download('stopwords')
 from nltk.corpus import stopwords
 import random
+import os
+import shutil
 
 app = Flask(__name__)
 
@@ -20,9 +22,11 @@ def index():
 @app.route('/uploader', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
+        shutil.rmtree("Uploaded_docs")
         f = request.files["file"]
-        f.save(secure_filename(f.filename))
-        with open(f.filename, 'r') as file:
+        os.mkdir("Uploaded_docs")
+        f.save("Uploaded_docs/"+secure_filename(f.filename))
+        with open("Uploaded_docs/"+f.filename, 'r') as file:
             doc = file.read().replace('\n', '')
         text = doc
         language = "en"
@@ -40,15 +44,7 @@ def upload_file():
         th = TextHighlighter(max_ngram_size=3, highlight_pre="<b >", highlight_post="</b>")
         h_text= th.highlight(text, keywords)
         
-        import os
-        import shutil
-
-
         shutil.rmtree("static/components/Word_Cloud")
-        # for file in os.listdir("static/components/Word_Cloud"):
-        #     if file.endswith(".png"):
-        #         print(os.path.join("static/components/Word_Cloud", file))
-        #         os.remove(os.path.join("static/components/Word_Cloud", file))
 
         stop_words = set(stopwords.words("english"))
         wordcloud = WordCloud(
@@ -59,7 +55,7 @@ def upload_file():
             random_state=41
         ).generate(str(doc))
         x=str(random.random())
-        print(x)
+        # print(x)
         os.mkdir("static/components/Word_Cloud")
         path="static/components/Word_Cloud/word"+x+".png"
         wordcloud.to_file(path)
